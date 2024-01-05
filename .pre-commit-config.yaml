@@ -1,0 +1,45 @@
+default_language_version:
+    python: python3.12
+
+default_stages:
+  - pre-commit
+  - pre-push
+
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+      - id: check-yaml
+      - id: debug-statements
+      - id: trailing-whitespace
+      - id: fix-byte-order-marker
+      - id: name-tests-test
+      - id: double-quote-string-fixer
+
+-   repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+    - id: black
+
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: 'v0.1.11'
+    hooks:
+      - id: ruff
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: 'v1.8.0'
+    hooks:
+    -   id: mypy
+        additional_dependencies: ['pydantic']
