@@ -15,7 +15,7 @@ async def app() -> AsyncGenerator[FastAPI, None]:
 
 @pytest.fixture()
 async def client(app: FastAPI) -> AsyncGenerator[httpx.AsyncClient, None]:
-    headers = {'x-real-ip': '8.8.8.8'}
+    headers = {'x-real-ip': '2a02:d200::1'}
 
     async with httpx.AsyncClient(app=app, base_url='http://localhost.local', headers=headers) as client:
         try:
