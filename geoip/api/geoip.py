@@ -21,4 +21,4 @@ async def geoip(request: Request) -> models.GeoIP:
         raise NotFoundExceptionError(message='Invalid IP address', code='invalid_ip_address')
 
     result = await service.geoip.detect(ip=IPvAnyAddress(ip))
-    return models.GeoIP.model_validate(result.dict())
+    return models.GeoIP.model_validate(result.model_dump())
