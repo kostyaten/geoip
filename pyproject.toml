@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "geoip"
-version = "0.0.1"
+version = "0.0.2"
 description = "Microservice for determining country, city, etc. by IP address"
 authors = ["kostya <kostya@yandex.ru>"]
 readme = "README.md"
