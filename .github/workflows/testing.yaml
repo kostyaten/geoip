@@ -10,6 +10,7 @@ on:
 
 env:
   PYTHON_VERSION: 3.12.1
+  ENVIRONMENT: DEVELOPMENT
 
 jobs:
   pre-commit:
